@@ -1,0 +1,46 @@
+<h1>Style Models</h1>
+
+<div id="image_preview"></div>
+
+<div class="posts-wrapper">
+  <div class="post">
+    <div class="post-body">
+      <div class="image-wrap">
+        <%= image_tag 'stylemodelspre.jpg', id: 'uploaded_file-preview', class: 'img-responsive' %>
+           <%= simple_form_for(( [ @post, @upload ]), html: { multipart: true }) do |f| %>
+              <div class="row">
+              <div class="col-md-12 text-center">
+                 <%= f.error_notification %>
+             </div>
+             <div class="container-fluid">
+                <div class="form-group text-center">
+             <h4>Upload New Style Models:</h4>
+             <%= f.input :uploaded_file, label: false %>
+             </div>
+          </div>
+      </div>
+              <% if @upload.errors.any? %>
+               <div id="error_explanation">
+             <h2><%= pluralize(@upload.errors.count, "error") %> prohibited this upload from being saved:</h2>
+
+      <ul>
+        <% @upload.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+ <!--    <%= f.label :uploaded_file, t('.upload_new_style_models') %> -->
+   <!--  <%= f.file_field :uploaded_file, multiple: true, name: 'upload[uploaded_file]' %> -->
+            <div class="form-group text-center">
+              <%= f.button :submit, class: 'btn-success btn-block' %>
+            </div>
+  </div>
+<% end %>
+
+<% # jquery upload template # %>
+<script id="template-upload" type="text/x-tmpl"><div class="upload">{%=o.name%}<div class="progress"><div class="progress-bar bar" style="width: 0%"></div></div></div></script>
+
+<%= link_to 'Back', posts_path(@post) %> 

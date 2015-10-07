@@ -9,6 +9,12 @@
       <div class="image center-block">
         <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
       </div>
+      <div class="sm-img-container">
+          <% post.uploads.each do |upload| %>
+            <a href="<%=upload.purchase_url %>">
+              <%=image_tag upload.uploaded_file.url(:thumb), class:'sm-image' %>
+            </a>
+            <% end %>
       <p class="supertitle">
         <%= post.supertitle %>
       </p>
