@@ -19,6 +19,6 @@ class UploadsController < ApplicationController
     end
 
     def upload_params
-      params.require(:upload).permit(:uploaded_file, :image_url, :post_id)
+      params.require(:upload).permit(:uploaded_file, :post_id)
     end
 end

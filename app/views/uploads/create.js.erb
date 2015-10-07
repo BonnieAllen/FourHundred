@@ -1,0 +1,7 @@
+<% if @upload.new_record? %>
+  alert('Failed');
+<% else %>
+  if ($('#image_preview') !== undefined) {
+    $('#image_preview').append("<%=j render partial: 'uploads/upload', locals: { upload: @upload } %>");
+  }
+<% end %>
