@@ -89,10 +89,6 @@ GEM
     did_you_mean (0.10.0)
       interception
     diff-lcs (1.2.5)
-    dotenv (2.0.2)
-    dotenv-rails (2.0.2)
-      dotenv (= 2.0.2)
-      railties (~> 4.0)
     erubis (2.7.0)
     execjs (2.6.0)
     factory_girl (4.5.0)
@@ -286,14 +282,12 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   did_you_mean
-  dotenv-rails
   factory_girl_rails (~> 4.0)
   figaro
   haml (~> 4.0.6)
   jbuilder (~> 2.0)
   jquery-fileupload-rails
   jquery-rails
-  kaminari
   launchy
   mini_magick
   paperclip (~> 4.2)

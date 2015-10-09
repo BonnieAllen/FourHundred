@@ -17,12 +17,10 @@ gem 'pry-rails'
 gem 'devise'
 gem "figaro"
 gem 'will_paginate'
-gem 'dotenv-rails'
 gem 'jquery-fileupload-rails'
 gem 'mini_magick'
 gem 'slim-rails'
 gem 'twitter-bootstrap-rails'
-gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'cancancan'
 gem 'therubyracer',  platforms: :ruby
