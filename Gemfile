@@ -24,8 +24,6 @@ gem 'slim-rails'
 gem 'twitter-bootstrap-rails'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
-gem 'omniauth'
-gem 'omniauth-github'
 gem 'cancancan'
 gem 'therubyracer',  platforms: :ruby
 
